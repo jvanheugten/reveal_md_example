@@ -10,11 +10,22 @@ revealOptions:
 
 ## subtitle
 
-some text
+those slides are to be used with atom, with the `atom-reveal-md` package
 
 ----
 
-subslide text
+If you want to serve the slides outside atom, you need to install the `reveal-md-atomized` package:
+
+```bash
+npm install -g reveal-md-atomized
+```
+
+Then serve the slides:
+```bash
+reveal-md test_reveal.md
+```
+
+You'll be able to use the presenter view.
 
 ---
 
