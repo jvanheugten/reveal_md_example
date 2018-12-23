@@ -1,0 +1,8 @@
+.reveal .left {
+    float: left;
+    width: 48%;
+}
+.reveal .right {
+    float: right;
+    width: 48%;
+}
