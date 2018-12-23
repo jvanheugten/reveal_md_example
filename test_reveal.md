@@ -1,7 +1,7 @@
 ---
 title: test_reveal
 theme: white
-css: side_by_side.css
+css: my_custom.css
 revealOptions:
     transition: convex
 ---
@@ -18,7 +18,7 @@ subslide text
 
 ---
 
-<!-- .slide: data-background="#FF4081" data-transition="zoom" -->
+<!-- .slide: data-background="#00cc66" data-transition="zoom" -->
 # Custom slide
 
 - Item 1 <!-- .element: class="fragment" data-fragment-index="2" -->
@@ -26,7 +26,8 @@ subslide text
 
 
 > quote
-note: tralala
+
+Note: speaker note to be read in presenter mode (type "S" on keyboard to activate)
 
 ---
 
