@@ -1,66 +1,112 @@
 ---
 title: test_reveal
-theme: white
-css: my_custom.css
-revealOptions:
-    transition: convex
+presentation:
+  theme: night.css
+  showNotes: false
+  enableSpeakerNotes: true
 ---
+<!-- @import "my-style.less" -->
 
-# title
+<!-- slide -->
 
-## subtitle
+# reveal & markdown
+## next-gen slides done easily
 
-those slides are to be used with atom, with the `atom-reveal-md` package
+Those slides are done with [atom](https://atom.io/), with the [markdown-preview-enhanced](https://atom.io/packages/markdown-preview-enhanced) package
 
-----
+<!-- slide -->
 
-If you want to serve the slides outside atom, you need to install the `reveal-md-atomized` package:
-
-```bash
-npm install -g reveal-md-atomized
+Those slides are customized thanks an import statement in the markdown file:
+```less
+<!-- @import "my-style.less" -->
 ```
 
-Then serve the slides:
-```bash
-reveal-md test_reveal.md
+The style file `my-style.less` contains this:
+```less
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+.reveal .slides {
+    // modify all slides
+    font-family: 'Ubuntu', sans-serif;
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Ubuntu', sans-serif;
+        text-transform: none;
+    }
+}
 ```
 
-You'll be able to use the presenter view.
+<!-- slide -->
 
----
+If you want to serve the slides outside atom, just export the html file the context menu of the preview with right-click then choose: `HTML > offline`
 
-<!-- .slide: data-background="#00cc66" data-transition="zoom" -->
-# Custom slide
+Then open the HTML file which has been generated with firefox.
+
+If you type `S`, you'll be able to use the presenter view.
+
+<!-- slide vertical=true -->
+
+## Vertical slide
+
+You can have vertically nested slides.
+
+Press escape during presentation to see the slides map.
+
+<!-- .slide:
+  data-background="https://opuszine.us/_assets/reviews/my-neighbor-totoro-hayao-miyazaki.jpg"
+-->
+
+## Custom slide
+
+You can customize slides properties.
+
+Example: using the `data-background` property:
+```
+<!-- .slide:
+  data-background="https://opuszine.us/_assets/reviews/my-neighbor-totoro-hayao-miyazaki.jpg"
+-->
+```
+
+<!-- .slide:
+  data-background="#4bb"
+  data-transition="zoom"
+  data-notes="speaker note to be read in presenter mode (type 'S' on keyboard to activate)"
+  vertical=true
+-->
+
+## Custom slide
+
+Example: using other properties:
+```
+<!-- .slide:
+  data-background="#4bb"
+  data-transition="zoom"
+  data-notes="speaker note to be read in presenter mode (type 'S' on keyboard to activate)"
+-->
+```
+
+<!-- slide -->
+
+## Features
+
+Other features are available, like fragments:
 
 - Item 1 <!-- .element: class="fragment" data-fragment-index="2" -->
 - Item 2 <!-- .element: class="fragment" data-fragment-index="1" -->
 
+Or quotes:
 
-> quote
+> Don't believe everything you see on the internet
+> [Albert Einstein]
 
-Note: speaker note to be read in presenter mode (type "S" on keyboard to activate)
-
----
-
-Top message
-
-## left title <!-- .element: class="left" -->
-
-## right title <!-- .element: class="right" -->
-
-Lorem ipsum blah blah blah <!-- .element: class="left" -->
-
-<img class="right" src="https://via.placeholder.com/500?text=right image">
-
----
+<!-- slide -->
 
 <div>
-  <div>
-    Top message
-  </div>
-  <div class="left">
-    <h2>Left part</h2>
-    With bullet list:
+  Or you can write plain html to use flex & create a 2-columns layout.
+</div>
+<div style="display:flex">
+  <div style="flex:1">
+    <h2>Left column</h2>
+    With text or bullet list:
     </br>
     <ul>
       <li> one
@@ -68,8 +114,15 @@ Lorem ipsum blah blah blah <!-- .element: class="left" -->
       <li> three
     </ul>
   </div>
-  <div class="right">
-    <h2>Right part</h2>
-    <img src="https://via.placeholder.com/200?text=right image">
+  <div style="flex:1">
+    <h2>Right column</h2>
+    <img src="https://ichef.bbci.co.uk/news/660/cpsprodpb/025B/production/_85730600_monkey2.jpg">
   </div>
 </div>
+
+<!-- slide -->
+
+## Some documentation
+
+https://shd101wyy.github.io/markdown-preview-enhanced/#/presentation
+https://github.com/shd101wyy/markdown-preview-enhanced/tree/master/docs
