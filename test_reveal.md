@@ -9,12 +9,22 @@ presentation:
 
 <!-- slide -->
 
-# reveal & markdown
-## next-gen slides done easily
+# Tooling
 
-Those slides are done with [atom](https://atom.io/), with the [markdown-preview-enhanced](https://atom.io/packages/markdown-preview-enhanced) package
+The goal is to provide you tools to:
+- code
+- test
+- build
+- deploy
 
 <!-- slide -->
+
+# Coding
+
+[Atom](https://atom.io/)
+![](https://upload.wikimedia.org/wikipedia/commons/8/80/Atom_editor_logo.svg)
+
+
 
 Those slides are customized thanks an import statement in the markdown file:
 ```less
